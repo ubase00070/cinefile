@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ko"><head>
+<html lang="ko" data-darkreader-proxy-injected="true"><head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no">
 <title>exitwound</title>
@@ -8,42 +8,12 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,400;1,500&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
 <style>
-  @font-face{
-    font-family:'Paperlogy';
-    font-weight:300;
-    font-style:normal;
-    font-display:swap;
-    src:url('https://raw.githubusercontent.com/Freesentation/paperlogy/main/woff2/Paperlogy-3Light.woff2') format('woff2');
-  }
-  @font-face{
-    font-family:'Paperlogy';
-    font-weight:400;
-    font-style:normal;
-    font-display:swap;
-    src:url('https://raw.githubusercontent.com/Freesentation/paperlogy/main/woff2/Paperlogy-4Regular.woff2') format('woff2');
-  }
-  @font-face{
-    font-family:'Paperlogy';
-    font-weight:500;
-    font-style:normal;
-    font-display:swap;
-    src:url('https://raw.githubusercontent.com/Freesentation/paperlogy/main/woff2/Paperlogy-5Medium.woff2') format('woff2');
-  }
-  @font-face{
-    font-family:'Paperlogy';
-    font-weight:600;
-    font-style:normal;
-    font-display:swap;
-    src:url('https://raw.githubusercontent.com/Freesentation/paperlogy/main/woff2/Paperlogy-6SemiBold.woff2') format('woff2');
-  }
-  @font-face{
-    font-family:'Paperlogy';
-    font-weight:700;
-    font-style:normal;
-    font-display:swap;
-    src:url('https://raw.githubusercontent.com/Freesentation/paperlogy/main/woff2/Paperlogy-7Bold.woff2') format('woff2');
-  }
+
+
+
+
 
   :root{
     --ink:#EDE3DA;
@@ -56,7 +26,7 @@
     --gold-dim:#8A7150;
     --card-w: min(92vw, 640px);
     --card-h: min(90dvh, 880px);
-    --serif-kr:'Paperlogy', sans-serif;
+    --serif-kr:'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
     --serif-en:'Cormorant Garamond', serif;
   }
 
@@ -265,7 +235,7 @@
   .poem__subtitle{
     margin:0;
     font-family:var(--serif-en); font-style:italic; font-weight:400;
-    font-size:13px; letter-spacing:.08em;
+    font-size:14px; letter-spacing:.08em;
     color:var(--gold-dim);
   }
   .poem__stitch{ margin:clamp(8px,1.8vh,14px) 0; }
@@ -519,9 +489,11 @@
 </head>
 <body data-last-units="[]" data-last-sync-time="1784103062582" data-auto-insu="" data-active-multi="" class="">
 
+  <!-- [수정 기능 주석처리] 다시 켜려면 이 주석을 해제하세요
   <button class="edit-toggle is-active" id="editToggle" type="button" aria-label="편집 모드">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"></path><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4Z"></path></svg>
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" data-darkreader-inline-stroke="" style="--darkreader-inline-stroke: currentColor;"><path d="M12 20h9"></path><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4Z"></path></svg>
   </button>
+  -->
 
   <div class="stage" aria-hidden="true">
     <div class="stage__img"></div>
@@ -533,23 +505,23 @@
     <div class="frame">
 
       <button class="nav-arrow nav-arrow--prev" id="btnPrev" aria-label="이전 페이지" type="button">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5l-7 7 7 7"></path></svg>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" data-darkreader-inline-stroke="" style="--darkreader-inline-stroke: currentColor;"><path d="M15 5l-7 7 7 7"></path></svg>
       </button>
       <button class="nav-arrow nav-arrow--next" id="btnNext" aria-label="다음 페이지" type="button">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5l7 7-7 7"></path></svg>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" data-darkreader-inline-stroke="" style="--darkreader-inline-stroke: currentColor;"><path d="M9 5l7 7-7 7"></path></svg>
       </button>
 
       <div class="deck-window" id="deckWindow">
         <div class="tap-zone tap-zone--left" id="tapLeft"></div>
         <div class="tap-zone tap-zone--right" id="tapRight"></div>
 
-        <div class="deck" id="deck" style="transform: translateX(-800%);">
+        <div class="deck" id="deck" style="transform: translateX(-900%);">
 
           <!-- ============ 0. 표지 (INTRO) ============ -->
           <section class="page">
             <div class="panel">
               <div class="cover">
-                <svg class="cover__mark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" style="color:var(--gold)">
+                <svg class="cover__mark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" style="color: var(--gold); --darkreader-inline-stroke: currentColor; --darkreader-inline-color: var(--darkreader-text--gold, var(--darkreader-text-000000, #1b1b1a));" data-darkreader-inline-stroke="" data-darkreader-inline-color="">
                   <line x1="4" y1="12" x2="20" y2="12"></line>
                   <line x1="12" y1="7" x2="12" y2="17"></line>
                   <line x1="8" y1="8" x2="8" y2="16"></line>
@@ -560,7 +532,7 @@
                 <p class="cover__desc editable">애초부터 상처가 아니라<br>벌어진 틈이었기에</p>
                 <button class="cover__start" id="btnStart" type="button">
                   <span class="editable" data-singleline="">Enter</span>
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5l7 7-7 7"></path></svg>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" data-darkreader-inline-stroke="" style="--darkreader-inline-stroke: currentColor;"><path d="M9 5l7 7-7 7"></path></svg>
                 </button>
                 <p class="cover__hint editable" data-singleline="">SWIPE  ·  좌우로 넘겨보세요</p>
               </div>
@@ -577,12 +549,12 @@
               <span class="folio">1</span>
               <div class="poem">
                 <div class="poem__head">
-                  <h2 class="poem__title editable" data-singleline="">등대</h2>
+                  <h2 class="poem__title editable" data-singleline="">등대지기</h2>
                   <p class="poem__subtitle editable" data-singleline="">Human Horror</p>
                 </div>
                 <div class="stitch poem__stitch"></div>
                 <div class="poem__body">
-                  <p class="editable">책상 위에 놓인 나무조각들<br>얼굴이 없기에 표정도 없다<br>비는 이미 그친 지 오래지만<br>검은 우비를 입고 문밖을 나선다<br><br>못 볼 것이라도 본 것일까<br>일그러진 채 고정된 얼굴들<br>바닥이 보이지 않는 칠흑 같은 어둠<br>형언할 수 없는 어둠이 소리치며 다가온다<br><br>호기심에 노를 저어 접근해 본다<br>그 어둠이 입을 벌려 보지만<br>더 깊은 심연을 보여주자 소멸해 버린다<br>말없이 노를 저어 되돌아간다</p>
+                  <p class="editable">책상 위에 놓인 나무조각들<br>얼굴이 없기에 표정도 없다<br>비는 이미 그친 지 오래지만<br>검은 우비를 입고 문밖을 나선다<br><br>못 볼 것이라도 본 것일까<br>일그러진 채 고정된 얼굴들<br>바닥이 보이지 않는 칠흑 같은 어둠<br>형언할 수 없는 어둠이 소리치며 다가온다<br><br>호기심에 노를 저어 접근해 본다<br>그 어둠이 입을 벌려 보지만<br>더 깊은 심연을 보여주자 소멸해 버린다<br><br>말없이 노를 저어 되돌아간다</p>
                 </div>
               </div>
             </div>
@@ -599,7 +571,7 @@
                 </div>
                 <div class="stitch poem__stitch"></div>
                 <div class="poem__body">
-                  <p class="editable">귀에서 이명이 사라지지 않는다<br>정면이나 아래를 향하면 잔상처럼 들려온다<br>그래도 내가 말할 땐 들리지 않기에<br>내가 귀 기울일 땐 들리지 않기에<br><br>언제부터 들렸던 것일까<br>기억을 계속 되감아 본다<br>안 들렸을 때가 진짜인 줄 알았는데<br>아무래도 들릴 때가 진짜인 모양이다<br><br>어떻게 해야 안 들리게 할 수 있을까<br>귀를 막아볼까 고개를 돌려볼까<br>이따금 사그라들기도 한다<br>드디어 사라진 건가 싶어서 눈을 감으면<br>다시 돌아온다<br>정말 다행이다</p>
+                  <p class="editable">귀에서 이명이 사라지지 않는다<br>위나 아래를 향하면 잔상처럼 들려온다<br>그래도 내가 말할 땐 들리지 않기에<br>내가 귀 기울일 땐 들리지 않기에<br><br>언제부터 들렸던 것일까<br>기억을 계속 되감아 본다<br>안 들렸을 때가 진짜인 줄 알았는데<br>아무래도 들릴 때가 진짜인 모양이다<br><br>어떻게 해야 안 들리게 할 수 있을까<br>귀를 막아볼까 고개를 돌려볼까<br>이따금 사그라들기도 한다<br>드디어 사라진 건가 싶어서 눈을 감으면<br>다시 돌아온다<br>정말 다행이다</p>
                 </div>
               </div>
             </div>
@@ -616,7 +588,7 @@
                 </div>
                 <div class="stitch poem__stitch"></div>
                 <div class="poem__body">
-                  <p class="editable">평온의 시간이 왔다<br>사랑의 북소리가 울려 퍼지자<br>아물던 상처가 조금씩 다시 벌어진다<br><br>네 무기를 얼마나 아끼는가?<br>너무나도<br><br>그걸 어디까지 휘두를 수 있는가?<br>힘닿는 데까지<br><br>네 신도 벨 수 있는가?<br>그러려고 뽑았기에<br><br>아직 무기 날이 서 있는가?<br>글쎄<br>한 번쯤 더 벨 수 있지 않을까</p>
+                  <p class="editable">평온의 시간이 왔다<br>사랑의 북소리가 울려 퍼지자<br>아물던 상처가 조금씩 다시 벌어진다<br><br>네 무기를 얼마나 아끼는가?<br>너무나도<br><br>그걸 어디까지 휘두를 수 있는가?<br>힘닿는 데까지<br><br>네 신도 벨 수 있는가?<br>그러려고 뽑았기에<br><br>아직 무기 날이 서 있는가?<br>글쎄<br>한 번쯤은 더 벨 수 있지 않을까</p>
                 </div>
               </div>
             </div>
@@ -628,12 +600,12 @@
               <span class="folio">4</span>
               <div class="poem">
                 <div class="poem__head">
-                  <h2 class="poem__title editable" data-singleline="">90s</h2>
-                  <p class="poem__subtitle editable" data-singleline="">Screamer</p>
+                  <h2 class="poem__title editable" data-singleline="">파라오</h2>
+                  <p class="poem__subtitle editable" data-singleline="">매</p>
                 </div>
                 <div class="stitch poem__stitch"></div>
                 <div class="poem__body">
-                  <p class="editable"><br></p>
+                  <p class="editable">어깨에 감각이 사라졌다<br>흐르던 핏자국이 말라버렸다<br>발길이 떨어지지 않는다<br>눈꺼풀조차 감아지지 않는다<br><br>무해한 웃음소리<br>따스하게 꽉 찬 테이블<br>좌석이 하나둘씩 비어간다<br>무대가 비워진다<br><br>둥지를 벗어나<br>들판을 가로질러<br>구름을 뚫는다<br>푸른 구체가 비친다<br><br>몸이 다시 움직이기 시작한다</p>
                 </div>
               </div>
             </div>
@@ -650,7 +622,7 @@
                 </div>
                 <div class="stitch poem__stitch"></div>
                 <div class="poem__body">
-                  <p class="editable">규칙을 거스르는 건 쉽다<br>습관을 깨는 건 쉽지 않다<br>신념을 굽히는 건 어렵지 않다<br>도망치는 건 불가능하다<br><br>시간을 너무 많이 써버렸다<br>증상을 파악하느라고<br>증상을 이겨내느라고<br>검사 결과가 나왔다<br><br>건전하게만 바라보지 말랜다<br>두 모습을 겹쳐 보랜다<br>어차피 하나인데<br>애써 구분하지 말라며<br><br><br></p>
+                  <p class="editable">규칙을 거스르는 건 쉽다<br>습관을 깨는 건 쉽지 않다<br>신념을 굽히는 건 어렵지 않다<br>도망치는 건 불가능하다<br><br>시간을 너무 많이 써버렸다<br>증상을 파악하느라고<br>증상을 이겨내느라고<br>검사 결과가 나왔다<br><br>하나로 고정하려 애쓰지 말랜다<br>두 모습을 겹쳐 보랜다<br>어차피 하나인데<br>애써 구분하지 말라며<br></p>
                 </div>
               </div>
             </div>
@@ -663,11 +635,11 @@
               <div class="poem">
                 <div class="poem__head">
                   <h2 class="poem__title editable" data-singleline="">달</h2>
-                  <p class="poem__subtitle editable" data-singleline="">Moon</p>
+                  <p class="poem__subtitle editable" data-singleline="">Dance of Death</p>
                 </div>
                 <div class="stitch poem__stitch"></div>
                 <div class="poem__body">
-                  <p class="editable">잡고 있던 손을 놓자<br>궤도가 흔들리며 휘청인다<br>공전 속도가 달라졌음을<br>자전 속도가 달라졌음을 느낀다<br><br>전에는 이렇지 않았는데<br>점점 눈이 너무 부시다<br>양 손바닥을 다 써봐도<br>더 이상 정확히 가려지지 않는다<br><br>기준점은 공멸하지 않는다<br>그때 먼저 알아봤다면 달라졌을까<br>난 후회하지 않는 사람인데<br>궤적을 따라갈 뿐인데</p>
+                  <p class="editable">붙잡고 있던 손을 놓자<br>궤도가 흔들리며 휘청인다<br>공전 속도가 달라졌음을<br>자전 속도가 달라졌음을 느낀다<br><br>전에는 이렇지 않았는데<br>눈이 너무나 부시다<br>양손바닥을 다 써봐도<br>더 이상 정확히 가려지지 않는다<br><br>그때 놓치지 않았다면 달라졌을까<br>아니지<br>난 후회하지 않는 사람인데<br>그저 조금씩 멀어져 갈 뿐인데</p>
                 </div>
               </div>
             </div>
@@ -696,12 +668,12 @@
               <span class="folio">8</span>
               <div class="poem">
                 <div class="poem__head">
-                  <h2 class="poem__title editable" data-singleline="">Sunflower</h2>
-                  <p class="poem__subtitle editable" data-singleline="">혜바라기</p>
+                  <h2 class="poem__title editable" data-singleline="">레드카펫</h2>
+                  <p class="poem__subtitle editable" data-singleline="">Undead</p>
                 </div>
                 <div class="stitch poem__stitch"></div>
                 <div class="poem__body">
-                  <p class="editable"><br></p>
+                  <p class="editable">온기 어린 가시만 끌어안다가<br>핏기 없는 거울 앞에 선다<br>거울 속에 미소가 보인다<br>따라 웃는다<br><br>나한텐 열쇠가 없는데<br>이번엔 열려있는 모양이다<br>어쩌면 원래부터 쭉 열려 있었는지도<br><br>발을 먼저 집어넣어 본다<br>분명히 뜨겁다고 들었는데<br>생각보다 버틸만하다<br><br>상체까지 들어와 본다<br>자세를 바로하고<br>정면을 바라본다<br><br>아무래도 둘은 무리다<br>혼자는 딱 들어맞는다</p>
                 </div>
               </div>
             </div>
@@ -718,7 +690,7 @@
                 </div>
                 <div class="stitch poem__stitch"></div>
                 <div class="poem__body">
-                  <p class="editable">현재의 존재를 피부 속에 가둔다<br>내가 간직하려고 내가 살려고<br>그러나 산 자를 박제할 수 있겠는가<br><br>그 안에서 괴물이 발버둥 친다<br>마구 할퀴자 피부 껍질이 찢어질 듯이<br>상처는 밖이 아니라 안에서 난다<br><br>괴물이 날 부른다<br>날 점점 사로잡는다<br>꿈에서는 아직 그대로인데<br>계속 꿈꾸게 해주겠다며<br><br>내면에 숨겨진 비밀만큼이나 아픈<br>과거가 된 현재를 돌아보니<br>똑같은 괴물이 여전히 울부짖고 있다</p>
+                  <p class="editable">괴물을 피부 속에 가둔다<br>내가 살아가려고<br>내 안에 간직하려고<br>그러나 산 자를 박제할 수 있겠는가<br><br>그 안에서의 고통스러운 발버둥<br>피부 껍질이 찢어질 듯이<br>상처는 밖이 아니라 안에서 나는 법<br><br>괴물이 날 부른다<br>날 점점 사로잡는다<br>꿈속에서는 아직 버틸 만한데<br>그렇다면 계속 꿈꾸게 해주겠다며<br><br>내면의 상처를 안은 채<br>비밀로 묻어둔 채<br>과거가 돼버린 괴물을 돌아보니<br>여전히 똑같은 모습으로<br>똑같이 울부짖고 있다</p>
                 </div>
               </div>
             </div>
@@ -745,7 +717,7 @@
           <section class="page">
             <div class="panel">
               <div class="outro">
-                <svg class="outro__mark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" style="color:var(--gold)">
+                <svg class="outro__mark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" style="color: var(--gold); --darkreader-inline-stroke: currentColor; --darkreader-inline-color: var(--darkreader-text--gold, var(--darkreader-text-000000, #1b1b1a));" data-darkreader-inline-stroke="" data-darkreader-inline-color="">
                   <line x1="4" y1="12" x2="20" y2="12"></line>
                   <line x1="12" y1="7" x2="12" y2="17"></line>
                 </svg>
@@ -769,7 +741,7 @@
         </div>
       </div>
 
-      <div class="progress" id="progress"><div class="progress__dot"></div><div class="progress__dot"></div><div class="progress__dot"></div><div class="progress__dot"></div><div class="progress__dot"></div><div class="progress__dot"></div><div class="progress__dot"></div><div class="progress__dot"></div><div class="progress__dot is-active"></div><div class="progress__dot"></div><div class="progress__dot"></div><div class="progress__dot"></div></div>
+      <div class="progress" id="progress"><div class="progress__dot"></div><div class="progress__dot"></div><div class="progress__dot"></div><div class="progress__dot"></div><div class="progress__dot"></div><div class="progress__dot"></div><div class="progress__dot"></div><div class="progress__dot"></div><div class="progress__dot"></div><div class="progress__dot is-active"></div><div class="progress__dot"></div><div class="progress__dot"></div></div>
 
     </div>
   </div>
@@ -869,6 +841,7 @@
 })();
 </script>
 
+<!-- [수정 기능 주석처리] 다시 켜려면 이 주석을 해제하세요
 <script>
 (function(){
   const AUTOSAVE_KEY = 'exitwound_autosave_v1';
@@ -1050,6 +1023,7 @@
   offerDraftRestore();
 })();
 </script>
+-->
 
 
 </body></html>
